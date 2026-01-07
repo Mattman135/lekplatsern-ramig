@@ -91,12 +91,10 @@ export default async function DogparkPage(props) {
 
         <div className="border border-black">
           <iframe
-            src={
-              foundPark.location_link.replace(
-                "https://www.google.com/maps/place/",
-                "https://www.google.com/maps/embed/v1/place?q="
-              ) + "&key=YOUR_GOOGLE_MAPS_API_KEY"
-            }
+            src={`https://maps.google.com/maps?q=${foundPark.latitude.replace(
+              ",",
+              "."
+            )},${foundPark.longitude.replace(",", ".")}&z=15&output=embed`}
             width="600"
             height="450"
             style={{ border: 0 }}
