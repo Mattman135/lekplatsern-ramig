@@ -18,7 +18,7 @@ export default async function DogparkPage(props) {
   if (!foundPark) {
     return (
       <main className="p-4">
-        <h1>Dog park "{dogparkName}" not found</h1>
+        <h1>Dog park &quot;{dogparkName}&quot; not found</h1>
       </main>
     )
   }
