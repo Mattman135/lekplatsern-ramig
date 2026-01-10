@@ -10,7 +10,7 @@ const Footer = () => {
         <div className=" flex lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
           <div className="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
             <p className="mt-3 text-sm text-base-content/60">
-              Copyright © {new Date().getFullYear()} - All rights reserved
+              Copyright © {new Date().getFullYear()}
             </p>
             <a
               href="https://shipfa.st/?ref=shipfast_badge"
@@ -19,7 +19,7 @@ const Footer = () => {
               className="mt-4 inline-block cursor-pointer rounded bg-neutral px-2 py-1 text-sm text-neutral-content ring-1 ring-base-content/10 duration-200 hover:ring-neutral"
             >
               <div className="flex items-center gap-1">
-                <span className="opacity-90">Built with</span>
+                <span className="opacity-90">Byggt med</span>
                 <span className="flex items-center gap-0.5 font-semibold tracking-tight">
                   <svg
                     className="size-5"
@@ -42,10 +42,6 @@ const Footer = () => {
 
           <div className="flex-grow flex flex-wrap justify-center -mb-10 md:mt-0 mt-10 text-center">
             <div className="lg:w-1/3 md:w-1/2 w-full px-4">
-              <div className="footer-title font-semibold text-base-content tracking-widest text-sm md:text-left mb-3">
-                LEGAL
-              </div>
-
               <div className="flex flex-col justify-center items-center md:items-start gap-2 mb-10 text-sm">
                 {/* 
                   lägg till i href /privacy-policy om jag vill ha med den
@@ -53,8 +49,8 @@ const Footer = () => {
                     Go the the /app/tos/page.js & /app/privacy-policy/page.js files in the repo to get the prompts. 
                     Add your business details, prompt ChatGPT, and you're up & running!
                 */}
-                <Link href="" className="link link-hover">
-                  Privacy policy
+                <Link href="/privacy-policy" className="link link-hover">
+                  Integritetspolicy
                 </Link>
               </div>
             </div>

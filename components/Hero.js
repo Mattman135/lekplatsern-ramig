@@ -85,7 +85,7 @@ const Hero = () => {
               <input
                 type="search"
                 required
-                placeholder="Sök på stad eller kommun"
+                placeholder="Sök på stad"
                 value={searchTerm}
                 onChange={handleInputChange}
               />

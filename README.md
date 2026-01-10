@@ -1,1 +1,1 @@
-# Swedish Dog park Directory
+# Swedish Dogpark Directory
