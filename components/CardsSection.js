@@ -1,13 +1,13 @@
 "use client"
 
 import { useState } from "react"
-import DogparkCard from "@/components/DogparkCard"
+import CardComponent from "@/components/CardComponent"
 
-const CardsSection = ({ dogparks }) => {
+const CardsSection = ({ items }) => {
   const [currentPage, setCurrentPage] = useState(1)
   const cardsPerPage = 9
 
-  const dataToDisplay = dogparks.length > 0 ? dogparks : [];
+  const dataToDisplay = Array.isArray(items) && items.length > 0 ? items : []
 
   const indexOfLastCard = currentPage * cardsPerPage
   const indexOfFirstCard = indexOfLastCard - cardsPerPage
@@ -24,11 +24,12 @@ const CardsSection = ({ dogparks }) => {
   const totalPages = Math.ceil(dataToDisplay.length / cardsPerPage)
 
   return (
-    <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-8 bg-base-200">
-      {currentCards.map((park, index) => {
-        return <DogparkCard key={index} park={park} />
-      })}
-      <div className="flex justify-center mt-8 col-span-full gap-4">
+    <section className="bg-base-200 p-8">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
+        {currentCards.map((park, index) => {
+          return <CardComponent key={index} park={park} />
+        })}
+      <div className="flex justify-center mt-8 col-span-full gap-4 ">
         <button
           className="btn btn-primary"
           onClick={handlePreviousPage}
@@ -70,6 +71,7 @@ const CardsSection = ({ dogparks }) => {
           Sida {dataToDisplay.length === 0 ? 0 : currentPage} av {totalPages}
         </span>
       </div>
+    </div>
     </section>
   )
 }

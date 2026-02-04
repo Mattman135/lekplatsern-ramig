@@ -1,6 +1,7 @@
 "use client"
 import { useState, useEffect } from "react"
 import CardsSection from "./CardsSection"
+import config from "@/config"
 
 const Hero = () => {
   const [searchTerm, setSearchTerm] = useState("")
@@ -12,7 +13,7 @@ const Hero = () => {
     fetch(`/api/dogparks/search?city=`)
       .then((res) => res.json())
       .then((data) => {
-        setFilteredDogparks(data.dogparks)
+        setFilteredDogparks(data.items || [])
       })
   }, []) // Empty dependency array means this runs once on mount
 
@@ -22,15 +23,15 @@ const Hero = () => {
         fetch(`/api/dogparks/search?city=${searchTerm}`)
           .then((res) => res.json())
           .then((data) => {
-            setFilteredDogparks(data.dogparks)
-            setSuggestions(data.suggestions)
+            setFilteredDogparks(data.items || [])
+            setSuggestions(data.suggestions || [])
           })
       } else {
         // Fetch all dog parks when search term is empty
         fetch(`/api/dogparks/search?city=`) // Empty city param to get all
           .then((res) => res.json())
           .then((data) => {
-            setFilteredDogparks(data.dogparks)
+            setFilteredDogparks(data.items || [])
             setSuggestions([]) // Clear suggestions when displaying all parks
           })
       }
@@ -56,14 +57,10 @@ const Hero = () => {
         <div className="flex flex-col gap-10 lg:gap-14 items-center justify-center text-center lg:text-left lg:items-start backgroundcolor">
           <div>
             <h1 className="font-extrabold text-4xl lg:text-6xl tracking-tight md:-mb-4 mb-4">
-              Hitta Hundrastgårdar <br></br> nära dig
+              Hitta {config.appName} <br></br> nära dig
             </h1>
           </div>
-          <div className="max-w-100">
-            Välkommen till en svensk hundrastgårdkatalog. Oavsett om du är en
-            hängiven hundägare som söker ett nytt äventyr eller en hundentusiast
-            som letar efter den perfekta lhundrastgården, har du kommit rätt.
-          </div>
+          <div className="max-w-100">{config.appDescription}</div>
           <div className="relative w-full max-w-xs">
             <label className="input">
               <svg
@@ -107,7 +104,7 @@ const Hero = () => {
           </div>{" "}
         </div>
       </section>
-      <CardsSection dogparks={filteredDogparks} />
+      <CardsSection items={filteredDogparks} />
     </>
   )
 }

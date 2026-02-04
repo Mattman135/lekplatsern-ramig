@@ -52,7 +52,7 @@ const Header = () => {
             </svg>
 
             <span className="font-extrabold text-lg">
-              Hundrastgårdar
+              {config.appName}
               <br /> i Sverige
             </span>
           </Link>

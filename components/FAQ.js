@@ -7,67 +7,37 @@ import { useRef, useState } from "react"
 
 const faqList = [
   {
-    question: "Vad ska jag leta efter i en hundvänlig park?",
+    question: "Lorem ipsum dolor sit amet?",
     answer: (
       <p className="space-y-2 leading-relaxed">
-        När du söker efter en hundvänlig park är det viktigt att ta hänsyn till
-        flera faktorer för att säkerställa en trygg och trevlig upplevelse för
-        både dig och din fyrbenta vän. För det första, leta efter parker med
-        säkra stängsel, vilket förhindrar att hundar springer iväg och erbjuder
-        en säker miljö utan koppel. Dessutom bör du uppmärksamma bekvämligheter
-        som vattenstationer, soptunnor för avfall och skuggiga områden, vilket
-        kan förbättra komforten under ditt besök. Det är också fördelaktigt att
-        läsa recensioner från andra besökare, eftersom detta kan ge dig insikter
-        om parkens renlighet, säkerhetsåtgärder och allmänna atmosfär. Genom att
-        ta hänsyn till dessa aspekter kan du hitta en hundvänlig park som passar
-        både dina och din hundens behov.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+        porttitor, arcu at posuere imperdiet, magna augue tristique nibh, nec
+        faucibus ipsum felis ac neque. Phasellus at turpis at lorem tincidunt
+        venenatis. Suspendisse potenti. Morbi vitae ipsum ut justo tincidunt
+        consequat. Curabitur vulputate, ipsum non posuere luctus, lorem tortor
+        volutpat erat, at aliquet arcu urna id nibh.
       </p>
     ),
   },
   {
-    question: "Hur hittar jag en hundrastgård nära mig?",
+    question: "Quis nostrud exercitation ullamco laboris?",
     answer: (
-      <p>
-        Att hitta en hundpark i närheten är enkelt med vår webbplats. Använd
-        helt enkelt vår interaktiva kartfunktion genom att ange din stad, så får
-        du en lista över hundparker i ditt område. Oavsett om du befinner dig i
-        en livlig stad eller i en mer lantlig miljö, kommer vår katalog att
-        hjälpa dig att hitta den perfekta hundparken för dina äventyr.
+      <p className="space-y-2 leading-relaxed">
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+        dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        Morbi tristique senectus et netus et malesuada fames ac turpis egestas.
       </p>
     ),
   },
   {
-    question: "Finns det några regler och etikett jag bör följa på hundparker?",
+    question: "Ut enim ad minim veniam, quis nostrud?",
     answer: (
       <p className="space-y-2 leading-relaxed">
-        Visst, att följa regler och utöva god etikett är avgörande när du
-        besöker hundparker för att säkerställa en harmonisk och säker miljö för
-        alla besökare. Till att börja med ska du alltid ha din hund kopplad när
-        du går in i och ut ur parken. Väl inne är det viktigt att vara medveten
-        om och följa parkens regler. Ansvarsfullt ägande innebär även att snabbt
-        plocka upp efter din hund och kasta avfallet i tillhandahållna
-        soptunnor. Slutligen är det väsentligt att övervaka din hunds
-        interaktioner med andra hundar för att förhindra konflikter och
-        upprätthålla en positiv upplevelse för alla. Genom att följa dessa
-        riktlinjer bidrar du till en välkomnande och trevlig atmosfär på
-        hundparken.
-      </p>
-    ),
-  },
-  {
-    question: "Hur kan jag bidra till hundparksgemenskapen?",
-    answer: (
-      <p className="space-y-2 leading-relaxed">
-        Att bidra till hundparksgemenskapen är inte bara en givande upplevelse
-        utan också ett utmärkt sätt att stödja andra hundälskare och förbättra
-        dina lokala hundparker. Du kan aktivt delta genom att dela dina
-        erfarenheter via recensioner och betyg för de parker du besöker. Genom
-        att göra detta ger du värdefulla insikter till andra som letar efter den
-        perfekta platsen. Dessutom kan du överväga att rekommendera parker till
-        vänner och andra hundentusiaster baserat på dina upplevelser, vilket
-        uppmuntrar fler människor att utforska dessa hundvänliga platser. Ditt
-        engagemang säkerställer den fortsatta framgången och glädjen av
-        hundrastgårdar i ditt område.
+        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+        ut aliquip ex ea commodo consequat. Sed do eiusmod tempor incididunt ut
+        labore et dolore magna aliqua. Aenean euismod, nibh in cursus
+        ullamcorper, ipsum sem gravida metus, eget pharetra nunc leo sed urna.
       </p>
     ),
   },

@@ -2,14 +2,14 @@
 
 import Link from "next/link"
 import Image from "next/image"
-import dogPlaceholder from "../app/dog.jpg"
 
-const DogparkCard = ({ park }) => {
+const CardComponent = ({ park }) => {
   const name = park["name"] || "Unknown Dog Park"
-  const imageUrl = park.imageUrl || dogPlaceholder
+  const imageUrl = undefined
   const address = park["adress"]
+
   return (
-    <div className="card bg-base-100 w-96 shadow-sm group overflow-hidden">
+    <div className="card bg-base-100 w-96 shadow-sm group overflow-hidden items-center">
       <figure className="relative w-full h-48 overflow-hidden">
         <Image
           src={imageUrl}
@@ -20,7 +20,7 @@ const DogparkCard = ({ park }) => {
         />
       </figure>
       <div className="card-body">
-        <h2 className="card-title">{name} hundrastgård</h2>
+        <h2 className="card-title">{name}</h2>
         <div className="card-actions justify-end">
           <Link
             href={`/pages/b/${encodeURIComponent(name)}`}
@@ -34,4 +34,4 @@ const DogparkCard = ({ park }) => {
   )
 }
 
-export default DogparkCard
+export default CardComponent

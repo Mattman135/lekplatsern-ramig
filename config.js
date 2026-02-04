@@ -1,10 +1,10 @@
 const config = {
   // REQUIRED
-  appName: "Hundrastgårdar i Sverige",
+  appName: "App Name",
   // REQUIRED: a short description of your app for SEO tags (can be overwritten)
-  appDescription: "Svensk hundrastgårdkatalog.",
+  appDescription: "App Description",
   // REQUIRED (no https://, not trialing slash at the end, just the naked domain)
-  domainName: "hundrastgardar.se",
+  domainName: "domain address.se",
 
   stripe: {
     // Create multiple plans in your Stripe dashboard, then add them here. You can add as many plans as you want, just make sure to add the priceId
