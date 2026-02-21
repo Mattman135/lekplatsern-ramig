@@ -6,33 +6,33 @@ import config from "@/config"
 const Hero = () => {
   const [searchTerm, setSearchTerm] = useState("")
   const [suggestions, setSuggestions] = useState([])
-  const [filteredDogparks, setFilteredDogparks] = useState([])
+  const [filteredItems, setFilteredItems] = useState([])
 
   useEffect(() => {
-    // Fetch all dog parks on initial load
-    fetch(`/api/dogparks/search?city=`)
+    // Fetch all items on initial load
+    fetch(`/api/items/search?q=`)
       .then((res) => res.json())
       .then((data) => {
-        setFilteredDogparks(data.items || [])
+        setFilteredItems(data.items || [])
       })
   }, []) // Empty dependency array means this runs once on mount
 
   useEffect(() => {
     const handler = setTimeout(() => {
       if (searchTerm) {
-        fetch(`/api/dogparks/search?city=${searchTerm}`)
+        fetch(`/api/items/search?q=${encodeURIComponent(searchTerm)}`)
           .then((res) => res.json())
           .then((data) => {
-            setFilteredDogparks(data.items || [])
+            setFilteredItems(data.items || [])
             setSuggestions(data.suggestions || [])
           })
       } else {
-        // Fetch all dog parks when search term is empty
-        fetch(`/api/dogparks/search?city=`) // Empty city param to get all
+        // Fetch all items when search term is empty
+        fetch(`/api/items/search?q=`) // Empty query param to get all
           .then((res) => res.json())
           .then((data) => {
-            setFilteredDogparks(data.items || [])
-            setSuggestions([]) // Clear suggestions when displaying all parks
+            setFilteredItems(data.items || [])
+            setSuggestions([]) // Clear suggestions when displaying all items
           })
       }
     }, 300) // 300ms debounce
@@ -82,7 +82,7 @@ const Hero = () => {
               <input
                 type="search"
                 required
-                placeholder="Sök på stad"
+                placeholder={config.directory?.searchPlaceholder || "Sök..."}
                 value={searchTerm}
                 onChange={handleInputChange}
               />
@@ -104,7 +104,7 @@ const Hero = () => {
           </div>{" "}
         </div>
       </section>
-      <CardsSection items={filteredDogparks} />
+      <CardsSection items={filteredItems} />
     </>
   )
 }

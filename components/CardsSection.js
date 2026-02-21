@@ -26,8 +26,8 @@ const CardsSection = ({ items }) => {
   return (
     <section className="bg-base-200 p-8">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
-        {currentCards.map((park, index) => {
-          return <CardComponent key={index} park={park} />
+        {currentCards.map((item, index) => {
+          return <CardComponent key={index} item={item} />
         })}
       <div className="flex justify-center mt-8 col-span-full gap-4 ">
         <button

@@ -2,8 +2,6 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import Image from "next/image"
-import logo from "@/app/icon.png"
 import config from "@/config"
 
 const links = [
@@ -85,15 +83,25 @@ const Header = () => {
               title={`${config.appName} hompage`}
               href="/"
             >
-              <Image
-                src={logo}
-                alt={`${config.appName} logo`}
-                className="w-8"
-                placeholder="blur"
-                priority={true}
-                width={32}
-                height={32}
-              />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="size-8"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"
+                />
+              </svg>
               <span className="font-extrabold text-lg">{config.appName}</span>
             </Link>
             <button

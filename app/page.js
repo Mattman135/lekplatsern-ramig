@@ -10,7 +10,6 @@ export default async function Home() {
     <main className="p-1 w-full">
       <Header />
       <Disclaimer />
-      <Feedback />
       <Hero />
       <FAQ />
       <Footer />
