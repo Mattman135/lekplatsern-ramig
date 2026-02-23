@@ -9,15 +9,33 @@ import config from "@/config"
 const faqList = [
   {
     question: `Vad är ${config.appName} och vad kan jag hitta här?`,
-    answer: <p className="space-y-2 leading-relaxed"></p>,
+    answer: (
+      <p className="space-y-2 leading-relaxed">
+        Lekplats är en kurerad katalog där föräldrar kan hitta noggrant utvalda
+        lekplatser, aktiviteter och lekmöjligheter för sina barn allt samlat på
+        ett och samma ställe.
+      </p>
+    ),
   },
   {
     question: "Vem är den här katalogen till för?",
-    answer: <p className="space-y-2 leading-relaxed"></p>,
+    answer: (
+      <p className="space-y-2 leading-relaxed">
+        Katalogen är skapad för föräldrar som vill hitta inspirerande och
+        kvalitetssäkrade lekalternativ för sina barn, utan att behöva leta runt
+        på egen hand.
+      </p>
+    ),
   },
   {
     question: `Varför ska jag använda ${config.appName} istället för en vanlig sökmotor?`,
-    answer: <p className="space-y-2 leading-relaxed"></p>,
+    answer: (
+      <p className="space-y-2 leading-relaxed">
+        Till skillnad från en vanlig sökmotor erbjuder Lekplats ett genomtänkt
+        och pålitligt urval, så att du slipper sålla igenom orelevanta resultat
+        och snabbt kan hitta något som passar just ditt barn.
+      </p>
+    ),
   },
 ]
 
